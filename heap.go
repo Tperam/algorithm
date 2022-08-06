@@ -1,7 +1,5 @@
 package algorithm
 
-import "fmt"
-
 type Heap[T int | int8 | int16 | int32 | int64 | float64 | float32 | string] struct {
 	slice []T
 }
@@ -14,7 +12,7 @@ func (h *Heap[T]) Pop() (result T) {
 	h.slice[0] = h.slice[len(h.slice)-1]
 	//h.slice[len(h.slice)-1] = nil
 	h.slice = h.slice[:len(h.slice)-1]
-	fmt.Println(h)
+
 	h.down(0)
 
 	return result
