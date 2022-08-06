@@ -16,7 +16,7 @@ func (h *Heap[T]) Pop() (result T) {
 	h.slice = h.slice[:len(h.slice)-1]
 	fmt.Println(h)
 	h.down(0)
-	fmt.Println(h)
+
 	return result
 }
 
